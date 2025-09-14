@@ -1,0 +1,39 @@
+PRIME WAVE CONFIGURATION
+========================
+
+This is the exact configuration for the perfect wave pattern:
+- Single smooth arch that starts flat, curves up gently, then back down to flat
+
+PARAMETERS:
+-----------
+--wave-amplitude 0.2    (Gentle curve height - not too dramatic)
+--wave-frequency 1.0    (Single wave cycle across the width)
+
+COMMAND TEMPLATE:
+----------------
+python3 src/gradient_generator.py --mode wave --palette-file [PALETTE] --steps [STEPS] --width 2000 --height 3000 --border 100 --border-color "#FFFFFF" --wave-amplitude 0.2 --wave-frequency 1.0 --output [OUTPUT_FILE]
+
+EXAMPLE USAGE:
+--------------
+# Greyscale version
+python3 src/gradient_generator.py --mode wave --palette-file data/palettes/large_greyscale_palette.txt --steps 25 --width 2000 --height 3000 --border 100 --border-color "#FFFFFF" --wave-amplitude 0.2 --wave-frequency 1.0 --output examples/greyscale_prime_wave.png
+
+# Purple version  
+python3 src/gradient_generator.py --mode wave --palette-file data/palettes/purple_50_colors.txt --steps 25 --width 2000 --height 3000 --border 100 --border-color "#FFFFFF" --wave-amplitude 0.2 --wave-frequency 1.0 --output examples/purple_prime_wave.png
+
+# G1 palette version
+python3 src/gradient_generator.py --mode wave --palette-file data/palettes/G1_palette.txt --steps 25 --width 2000 --height 3000 --border 100 --border-color "#FFFFFF" --wave-amplitude 0.2 --wave-frequency 1.0 --output examples/G1_prime_wave.png
+
+WAVE CHARACTERISTICS:
+--------------------
+- Starts as straight line on left edge
+- Gently curves up toward center
+- Peaks in the middle of the image
+- Gently curves back down toward right
+- Ends as straight line on right edge
+- Creates a smooth, natural arch shape
+- Perfect balance between subtle and visible
+
+REFERENCE IMAGE:
+----------------
+PRIME_WAVE_EXAMPLE.png - The perfect wave pattern
