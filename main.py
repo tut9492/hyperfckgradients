@@ -36,13 +36,15 @@ Examples:
     
     # Gradient generation subcommand
     gradient_parser = subparsers.add_parser('gradient', help='Generate gradients')
-    gradient_parser.add_argument('--mode', choices=['wave', 'chunky'], default='wave', help='Gradient mode')
+    gradient_parser.add_argument('--mode', choices=['straight-wave', 'progressive-wave', 'combined-wave'], default='straight-wave', help='Gradient mode')
     gradient_parser.add_argument('--palette-file', required=True, help='Palette file path')
     gradient_parser.add_argument('--steps', type=int, default=50, help='Number of gradient steps')
     gradient_parser.add_argument('--width', type=int, default=2000, help='Image width')
     gradient_parser.add_argument('--height', type=int, default=3000, help='Image height')
     gradient_parser.add_argument('--border', type=int, default=100, help='Border width')
     gradient_parser.add_argument('--border-color', default='#FFFFFF', help='Border color')
+    gradient_parser.add_argument('--orientation', choices=['horizontal', 'horizontal-flipped'], 
+                       default='horizontal', help='Gradient orientation')
     gradient_parser.add_argument('--wave-amplitude', type=float, default=0.08, help='Wave amplitude')
     gradient_parser.add_argument('--wave-frequency', type=float, default=2.5, help='Wave frequency')
     gradient_parser.add_argument('--grain-centered', nargs=2, type=float, metavar=('INTENSITY', 'SIZE'), help='Grain effect')
@@ -72,13 +74,15 @@ Examples:
         sys.argv = ['gradient_generator.py']
         for key, value in vars(args).items():
             if key != 'command' and value is not None:
+                # Convert underscores to hyphens for gradient_generator arguments
+                arg_name = key.replace('_', '-')
                 if isinstance(value, bool):
                     if value:
-                        sys.argv.append(f'--{key}')
+                        sys.argv.append(f'--{arg_name}')
                 elif isinstance(value, list):
-                    sys.argv.extend([f'--{key}'] + [str(v) for v in value])
+                    sys.argv.extend([f'--{arg_name}'] + [str(v) for v in value])
                 else:
-                    sys.argv.extend([f'--{key}', str(value)])
+                    sys.argv.extend([f'--{arg_name}', str(value)])
         gradient_main()
     
     elif args.command == 'extract':

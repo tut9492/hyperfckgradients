@@ -1,0 +1,82 @@
+{
+  "prime_4A": {
+    "wave_type": "4A",
+    "wave_amplitude": 0.2,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF"
+  },
+  "prime_4A_subtle": {
+    "wave_type": "4A",
+    "wave_amplitude": 0.05,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF"
+  },
+  "prime_4B_subtle": {
+    "wave_type": "4B",
+    "wave_amplitude": 0.05,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF"
+  },
+  "progressive_mellow": {
+    "wave_type": "2A",
+    "amplitude_scale": 0.6,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF"
+  },
+  "left_edge_whisper": {
+    "wave_type": "1A",
+    "amplitude_scale": 0.4,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF"
+  },
+  "5A": {
+    "wave_type": "4A",
+    "wave_amplitude": 0.04,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF",
+    "center_shift": 0.06,
+    "asymmetry": 0.7,
+    "organic_jitter": 0.018,
+    "random_seed": 123456
+  },
+  "5B": {
+    "wave_type": "4A",
+    "wave_amplitude": 0.08,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF",
+    "center_shift": -0.1,
+    "asymmetry": -0.5,
+    "organic_jitter": 0.025,
+    "random_seed": 789
+  },
+  "5C": {
+    "wave_type": "4B",
+    "wave_amplitude": 0.06,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF",
+    "center_shift": 0.12,
+    "asymmetry": 0.3,
+    "organic_jitter": 0.035,
+    "random_seed": 456
+  },
+  "5D": {
+    "wave_type": "4A",
+    "wave_amplitude": 0.12,
+    "steps": 20,
+    "border": 100,
+    "border_color": "#FFFFFF",
+    "center_shift": 0.0,
+    "asymmetry": 0.0,
+    "organic_jitter": 0.04,
+    "random_seed": 999
+  }
+}
+

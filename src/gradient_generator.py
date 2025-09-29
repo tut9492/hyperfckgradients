@@ -13,6 +13,7 @@ import argparse
 from typing import List, Tuple
 from PIL import Image
 import numpy as np
+# Removed import for deleted module
 
 
 def hex_to_rgb(hex_color: str) -> Tuple[int, int, int]:
@@ -96,44 +97,38 @@ def generate_wave_gradient(width: int, height: int, colors: List[str], steps: in
                 if y_end > y_start:
                     gradient[y_start:y_end, x] = avg_color
         
-        # Fill any remaining black areas with the appropriate gradient colors
+        # Fill any remaining black areas with first and last colors
+        first_color = hex_to_rgb(colors[0])  # First color from palette
+        last_color = hex_to_rgb(colors[-1])  # Last color from palette
+        
         for x in range(grad_width):
             for y in range(grad_height):
                 if np.all(gradient[y, x] == 0):  # If pixel is black (unfilled)
-                    # Determine which step this pixel should belong to
-                    normalized_y = y / grad_height
-                    step = int(normalized_y * steps)
-                    step = max(0, min(steps - 1, step))
-                    
-                    # Get the color for this step
-                    start_color_idx = int(step * colors_per_step)
-                    end_color_idx = int((step + 1) * colors_per_step)
-                    avg_color = average_palette_slice(start_color_idx, end_color_idx)
-                    
-                    gradient[y, x] = avg_color
+                    # Fill top half with first color, bottom half with last color
+                    if y < grad_height // 2:
+                        gradient[y, x] = first_color
+                    else:
+                        gradient[y, x] = last_color
         
         # Ensure the very top and bottom rows are completely filled with correct colors
-        for x in range(grad_width):
-            # Fill top row with first color (darkest purple)
-            gradient[0, x] = average_palette_slice(0, int(colors_per_step))
-            # Fill bottom row with last color (lightest purple)
-            gradient[grad_height-1, x] = average_palette_slice(int((steps-1) * colors_per_step), len(colors))
+        first_color = hex_to_rgb(colors[0])  # First color from palette
+        last_color = hex_to_rgb(colors[-1])  # Last color from palette
         
-        # Fill any remaining gaps with the correct gradient colors
+        for x in range(grad_width):
+            # Fill top row with first color from palette
+            gradient[0, x] = first_color
+            # Fill bottom row with last color from palette
+            gradient[grad_height-1, x] = last_color
+        
+        # Fill any remaining gaps with first and last colors
         for x in range(grad_width):
             for y in range(grad_height):
                 if np.all(gradient[y, x] == 0):  # If pixel is still black (unfilled)
-                    # Determine which step this pixel should belong to based on its y position
-                    normalized_y = y / grad_height
-                    step = int(normalized_y * steps)
-                    step = max(0, min(steps - 1, step))
-                    
-                    # Get the color for this step
-                    start_color_idx = int(step * colors_per_step)
-                    end_color_idx = int((step + 1) * colors_per_step)
-                    avg_color = average_palette_slice(start_color_idx, end_color_idx)
-                    
-                    gradient[y, x] = avg_color
+                    # Fill top half with first color, bottom half with last color
+                    if y < grad_height // 2:
+                        gradient[y, x] = first_color
+                    else:
+                        gradient[y, x] = last_color
                     
     else:  # vertical - similar but with x displacement
         gradient = np.zeros((grad_height, grad_width, 3), dtype=np.uint8)
@@ -539,14 +534,14 @@ def extract_row_colors(image_path: str) -> List[str]:
 
 def main():
     parser = argparse.ArgumentParser(description='Generate gradient images from hex colors')
-    parser.add_argument('--mode', choices=['chunky', 'wave'], 
-                       default='chunky', help='Gradient mode')
+    parser.add_argument('--mode', choices=['straight-wave', 'progressive-wave', 'combined-wave'], 
+                       default='straight-wave', help='Gradient mode')
     parser.add_argument('--width', type=int, default=1000, help='Image width')
     parser.add_argument('--height', type=int, default=1000, help='Image height')
     parser.add_argument('--colors', nargs='+', help='Hex colors for gradient')
     parser.add_argument('--palette-file', help='File containing hex colors (one per line)')
     parser.add_argument('--steps', type=int, default=8, help='Number of steps for chunky mode')
-    parser.add_argument('--orientation', choices=['horizontal', 'vertical'], 
+    parser.add_argument('--orientation', choices=['horizontal', 'horizontal-flipped'], 
                        default='horizontal', help='Gradient orientation')
     parser.add_argument('--border', type=int, default=0, help='Border width in pixels')
     parser.add_argument('--border-color', help='Border color in hex format')
@@ -567,6 +562,8 @@ def main():
                        help='Apply rippling wave effect (amplitude frequency)')
     parser.add_argument('--wave-swirling', nargs=3, type=float, metavar=('STRENGTH', 'CENTER_X', 'CENTER_Y'),
                        help='Apply swirling wave effect (strength center_x center_y)')
+    parser.add_argument('--wave-type', type=str, help='Override wave type (e.g., 1A..4B)')
+    parser.add_argument('--preset', type=str, help='Preset name from presets/wave_styles.json')
     parser.add_argument('--wave-amplitude', type=float, default=0.3, help='Wave amplitude for wave mode (0.0-1.0)')
     parser.add_argument('--wave-frequency', type=float, default=2.0, help='Wave frequency for wave mode')
     parser.add_argument('--analyze', type=str, help='Analyze colors from image file')
@@ -593,14 +590,22 @@ def main():
         print("Error: At least 2 colors are required for a gradient")
         return
     
-    # Generate gradient
-    if args.mode == 'wave':
-        img = generate_wave_gradient(args.width, args.height, colors, args.steps,
-                                   args.wave_amplitude, args.wave_frequency,
-                                   args.orientation, args.border, args.border_color)
-    else:  # chunky mode
-        img = generate_chunky_gradient(args.width, args.height, colors, args.steps,
-                                     args.orientation, args.border, args.border_color)
+    # Generate gradient using comprehensive wave generator
+    from comprehensive_wave_generator import generate_wave_variation
+    
+    # Map old modes to new wave types
+    if args.wave_type:
+        wave_type = args.wave_type
+    elif args.mode == 'straight-wave':
+        wave_type = '1A'  # Default to 1A for straight-wave
+    elif args.mode == 'progressive-wave':
+        wave_type = '2A'  # Default to 2A for progressive-wave
+    else:  # combined-wave mode
+        wave_type = '3A'  # Default to 3A for combined-wave
+    
+    # Pass amplitude through; keep default amplitude_scale=1.0
+    img = generate_wave_variation(args.width, args.height, colors, args.steps,
+                                 wave_type, args.border, args.border_color, args.wave_amplitude)
     
     # Apply grain if specified
     if args.grain:

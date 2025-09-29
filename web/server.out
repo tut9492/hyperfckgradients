@@ -1,0 +1,114 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.2.11:8080
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 136-132-555
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /static/images/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /static/js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /static/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /gallery HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_0.0_test_palette_brown_25bands_dithering_20250929_103343.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_3A_green_with_bar_none_20250928_224720_300e2219.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_3B_yellow_pink_green_dithering_20250928_213531_4dd4e6b7.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_3B_rectangle_305_dithering_20250928_213407_050fe4fe.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_0.0_rectangle_305_dithering_20250928_213254_04568284.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_0.0_temp_dithering_20250928_212552_871426a0.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "[36mGET /generated/wave_0.0_temp_none_20250928_212422_147855d2.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_0.0_temp_white_grain_20250928_212111_b5f7c887.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_0.0_temp_dithering_20250928_212015_3422d390.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_2A_temp_dithering_20250928_211707_153ec4eb.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:51] "GET /generated/wave_2A_temp_dithering_20250928_211345_cca16987.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_1D_temp_white_grain_20250928_211123_05479694.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_1C_temp_dithering_20250928_211225_dc74ca71.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_rectangle_306_none_20250928_210811_f8a17525.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_1D_rectangle_306_white_grain_20250928_210953_b38e6450.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_dotsmall_white_grain_20250928_204539_b4c3f30b.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_doftiny_white_grain_20250928_204323_3268ec6a.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_doftiny_none_20250928_195646_4d6758e5.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_3B_gradient_298_none_20250926_105220_975e5d72.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3B_orange_to_teal_white_grain_20250926_091547_e95c05d6.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3B_gradient_298_white_grain_20250926_091316_b027ac0d.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3B_orange_to_teal_white_grain_20250926_084933_c30729b5.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_1C_purple_white_grain_20250926_083359_114e9119.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3D_purple_white_grain_20250926_082726_1a6ccbb2.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3B_pink_to_black_to_cyan_white_grain_20250926_072912_f29a5038.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_gradient_298_white_grain_20250926_072343_458c8622.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_gradient_298_white_grain_20250925_223516_446e09a0.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3C_gradient_298_white_grain_20250925_223345_8df34540.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_5C_gradient_298_white_grain_20250925_223250_4f1cc704.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3C_gradient_298_white_grain_20250925_223059_f52eb31c.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3B_yellow_pink_green_white_grain_20250925_222802_8cc663da.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3B_gradient_301_white_grain_20250925_214753_7630783a.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_bluegray_to_lavender_white_grain_20250925_214637_7e2c6acf.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_bluegray_to_lavender_white_grain_20250925_214406_0ab8d7a2.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_pink_to_black_to_cyan_white_grain_20250925_204818_c554d865.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_3A_pastel_rainbow__20250925_204216_ffb1df62.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_red_to_brothko_dithering_20250925_204004_83456a14.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_bluegray_to_lavender_dithering_20250925_203909_75771955.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_bluegray_to_lavender_none_20250925_203222_c4df763a.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_purple_to_orange_white_grain_20250925_203044_526023ef.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_purple_to_orange_none_20250925_203146_ed0fb6c4.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3A_yellow_pink_green_white_grain_20250925_202906_f35409ef.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2C_green_with_bar_white_grain_20250925_173338_98eb36ac.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2A_green_with_bar_white_grain_20250925_173049_0d75ac4c.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2A_purple_to_teal_white_grain_20250925_172956_e1f9e253.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2A_purple_to_teal_white_grain_20250925_172650_a2e79f54.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_1C_yellow_pink_green_dithering_20250925_172421_860e24a3.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_1D_gradient_298_white_grain_20250925_172322_3aa411b6.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_4A_gradient_301_white_grain_20250925_171620_f4cb5ea3.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_4B_gradient_301_dithering_20250925_171544_d90396c9.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_gradient_301_dithering_20250925_171303_d4e040a9.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2B_yellow_pink_green_dithering_20250925_162643_6ba2f3e8.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2B_yellow_pink_green_dithering_20250925_162606_53c9a7a7.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2B_yellow_pink_green_dithering_20250925_162218_9ed8ef91.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_5B_red_to_brothko_dithering_20250925_162151_0be3ac21.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3D_red_to_brothko_white_grain_20250925_162013_5ceff929.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_red_to_brothko_white_grain_20250925_161745_d1a95483.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_rainbow_pastel_none_20250925_160104_1a38e2e6.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_purple_to_peach_none_20250925_155630_7fcde8ff.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_magenta_to_blue_none_20250925_155538_3c36e992.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_magenta_to_blue_none_20250925_154922_09a071cd.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_1D_green_with_bar_none_20250925_154047_919a52a9.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_1D_bluegray_to_lavender_white_grain_20250925_153956_1dfd95bc.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_bluegray_to_lavender_white_grain_20250925_153803_c39b9d12.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_bluegray_to_lavender_white_grain_20250925_153404_5e24b4a5.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_rainbow_pastel_white_grain_20250925_153319_55ad8e15.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_magenta_to_blue_white_grain_20250925_153230_061f992c.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_purple_to_peach_white_grain_20250925_152113_f398a11a.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_purple_to_peach_white_grain_20250925_152036_b28e48b5.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_pink_to_blue_50_dithering_20250924_230825_df29768f.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_blue_to_yellow_50_white_grain_20250924_230542_a571fca5.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_black_to_blue_50_white_grain_20250924_230438_ea3011e5.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_orange_to_teal_50_white_grain_20250924_230040_8ce35d25.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_orange_to_sea_green_white_grain_20250924_225950_f97342c8.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_black_to_green_50_white_grain_20250924_225826_f9e3d5b1.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_0.0_green_to_teal_50_none_20250924_225721_42664237.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_4B_pink_to_blue_50_white_grain_20250924_225247_36ee8c24.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_0.0_pink_lavender_to_celeste_white_grain_20250924_225355_5ba1de6b.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_4A_pink_to_blue_50_dithering_20250924_224918_5bd39366.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "[36mGET /generated/wave_1A_orange_to_sea_green_15_bands_none_20250924_224809_d7a7d62d.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_2D_pink_lavender_to_celeste_dithering_20250924_223816_3821afe3.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:52] "GET /generated/wave_3D_tekhelet_to_sandy_brown_dithering_20250924_223713_83bcaf99.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "[36mGET /generated/wave_4B_blue_to_yellow_50__20250924_222853_e90b5c0c.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "[36mGET /generated/wave_4A_black_to_blue_50_none_20250924_222650_a34ee688.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "GET /generated/wave_3B_black_to_blue_50_dithering_20250924_222337_cf573070.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "GET /generated/wave_0.0_black_to_blue_50_dithering_20250924_222029_0c286553.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "[36mGET /generated/wave_5C_pink_lavender_to_celeste_none_20250924_221216_f230b500.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "[36mGET /generated/wave_5A_orange_to_sea_green_15_bands_none_20250924_220848_fd7bf622.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "GET /generated/wave_0.0_pink_to_blue_50_white_grain_20250924_220259_3b51e7ff.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "GET /generated/wave_0.0_pink_to_blue_50_dithering_20250924_220151_13d2ba80.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "GET /generated/wave_1A_tekhelet_to_sandy_brown_white_grain_20250924_214939_0ac6150b.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "GET /generated/wave_4A_green_to_teal_50_white_grain_20250924_205745_af8dbd09.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:49:53] "GET /generated/wave_4A_orange_to_teal_50_white_grain_20250924_181328_092ab1e0.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:51:05] "POST /generate HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:51:05] "GET /generated/wave_0.0_temp_dithering_20250929_105042_1fa5fb07.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:51:05] "GET /gallery HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:51:40] "POST /generate HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:51:40] "GET /generated/wave_0.0_temp_dithering_20250929_105118_4437c2a9.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2025 10:51:40] "GET /gallery HTTP/1.1" 200 -

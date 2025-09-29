@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperfckGradients</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HyperfckGradients</h1>
+        </div>
+
+        <div class="left-panel">
+            <div class="control-group">
+                <label for="wave-type">Wave</label>
+                <select id="wave-type">
+                    {% for wave_key, wave_name in wave_types.items() %}
+                    <option value="{{ wave_key }}">{{ wave_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="palette">Gradient</label>
+                <select id="palette">
+                    {% for palette_key, palette_data in palettes.items() %}
+                    <option value="{{ palette_key }}">{{ palette_data.display_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="bands">Bands</label>
+                <select id="bands">
+                    <option value="10">10 bands</option>
+                    <option value="15">15 bands</option>
+                    <option value="20" selected>20 bands</option>
+                    <option value="25">25 bands</option>
+                    <option value="30">30 bands</option>
+                    <option value="40">40 bands</option>
+                    <option value="50">50 bands</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="grain-effect">Grain</label>
+                <select id="grain-effect">
+                    {% for effect_key, effect_name in grain_effects.items() %}
+                    <option value="{{ effect_key }}">{{ effect_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+                    <div class="button-group">
+                        <button id="generate-btn" class="btn">Generate</button>
+                        <button id="random-btn" class="btn">Random NFT</button>
+                    </div>
+
+                    <div class="brand-logo">
+                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HyperfckGradients Logo" class="logo-image">
+                    </div>
+                </div>
+
+        <div class="main-content">
+            <div class="main-preview">
+                <div id="preview-placeholder" class="placeholder" style="color: #ffffff; text-align: center;">
+                    Click "Generate" to create your first gradient
+                </div>
+                <img id="preview-image" style="display: none;" alt="Generated Wave" class="preview-image">
+                <div id="loading" class="loading" style="display: none;">
+                    Generating your wave...
+                </div>
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="gallery-section">
+                <h3>Gallery</h3>
+                <div id="gallery-grid" class="gallery-grid">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="bottom-section">
+            </div>
+        </div>
+    </div>
+
+            <!-- Modal for image popup -->
+            <div id="imageModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <img id="modalImage" class="modal-image" alt="Full size image">
+                </div>
+            </div>
+
+            <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+        </body>
+    </html>
