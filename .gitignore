@@ -19,30 +19,39 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # Virtual environments
 venv/
 env/
 ENV/
+env.bak/
+venv.bak/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Generated images (keep examples)
-*.png
-*.jpg
-*.jpeg
-!examples/*.png
-!examples/*.jpg
-!examples/*.jpeg
+# Project specific
+web/generated/*.png
+web/server.out
+*.log
 
-# Temporary files
-*.tmp
-*.temp
+# Keep some generated examples
+!web/generated/
+web/generated/*.png
+
+# Keep Excel file for gradient source
+!Gradients for HG.xlsx
